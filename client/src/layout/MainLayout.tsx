@@ -6,7 +6,7 @@ const MainLayout: React.FC<{ children: React.ReactNode, darkMode: boolean, setDa
   return (
     <>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="max-w-7xl min-h-screen mx-auto px-6 py-8">{children}</main>
+      <main className="max-w-8xl min-h-screen mx-auto px-6 py-8">{children}</main>
       <Footer darkMode={darkMode} />
     </>
   )

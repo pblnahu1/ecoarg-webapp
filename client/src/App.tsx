@@ -11,6 +11,7 @@ function App() {
       <MainLayout darkMode={darkMode} setDarkMode={setDarkMode}>
         <Suspense fallback={<div>Cargando contenido...</div>}>
           <MainContent darkMode={darkMode} />
+          
         </Suspense>
       </MainLayout>
     </div>
