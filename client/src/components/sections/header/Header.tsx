@@ -7,10 +7,11 @@ interface HeaderContentProps {
 
 const Header = ({ darkMode, setDarkMode }: HeaderContentProps) => {
   return (
+    // sticky top-4 z-50
     <header
       className={`
         sticky top-4 z-50 mx-6 rounded-2xl border backdrop-blur-md transition
-        shadow-lg px-6 py-4
+        shadow-lg px-6 py-2
         ${darkMode ? 'bg-white/10 border-white/10' : 'bg-black/10 border-black/10'}
       `}
     >
@@ -23,9 +24,9 @@ const Header = ({ darkMode, setDarkMode }: HeaderContentProps) => {
           <p className={`text-sm sm:text-md ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             🤷‍♂️ No sabemos qué pasará mañana, pero hoy te traemos los datos
           </p>
-          <span className={`text-sm ${darkMode ? 'text-lime-400' : 'text-lime-700'} block mt-1`}>
+          {/* <span className={`text-sm ${darkMode ? 'text-lime-400' : 'text-lime-700'} block mt-1`}>
             {new Date().toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' })}
-          </span>
+          </span> */}
         </div>
 
         {/* Right: Buttons */}

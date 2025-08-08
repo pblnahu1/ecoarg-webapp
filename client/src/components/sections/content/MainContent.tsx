@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getDolares, DolarData } from "../../../services/DolarService";
 import { ArrowUp, ArrowDown, Minus } from "lucide-react";
 import { DolarCalculatorCharts } from "../../recharts/DolarCalculatorCharts";
+import {TooltipInfoHours} from "../../ui/TooltipInfoHours";
 
 interface MainContentProps {
   darkMode: boolean;
@@ -50,7 +51,12 @@ const MainContent = ({ darkMode }: MainContentProps) => {
 
   return (
     <>
-      <section className={`md:p-12 p-[0.5rem] rounded-xl shadow-2xl ${darkMode ? "bg-stone-800" : "bg-gray-200"}`}>
+      <section className={`p-[0.5rem] rounded-xl shadow-2xl ${darkMode ? "bg-stone-800" : "bg-gray-200"}`}>
+        {/* <p className="text-lg text-center my-4 text-gray-500">{marketStatus}</p> */}
+
+        <div>
+          <TooltipInfoHours />
+        </div>
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-6">
